@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import ThemeToggle from './ThemeToggle'
 import './Navbar.css'
 
 function Navbar() {
@@ -30,15 +31,11 @@ function Navbar() {
         <nav className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
             <div className="navbar__container container">
                 <Link to="/" className="navbar__logo">
-                    <div className="navbar__logo-icon">
-                        <span className="navbar__logo-bracket">&lt;</span>
-                        <span className="navbar__logo-slash">/</span>
-                        <span className="navbar__logo-bracket">&gt;</span>
-                    </div>
-                    <div className="navbar__logo-text">
-                        <span className="navbar__logo-name">Developer's</span>
-                        <span className="navbar__logo-den">Den</span>
-                    </div>
+                    <img
+                        src="/devqor-logo.jpg"
+                        alt="DevQor - Code. Create. Conquer."
+                        className="navbar__logo-image"
+                    />
                 </Link>
 
                 <div className={`navbar__menu ${isMobileMenuOpen ? 'navbar__menu--open' : ''}`}>
@@ -47,14 +44,15 @@ function Navbar() {
                             <li key={link.path}>
                                 <Link
                                     to={link.path}
-                                    className={`navbar__link ${location.pathname === link.path ? 'navbar__link--active' : ''}`}
+                                    className={`navbar__link hover-underline ${location.pathname === link.path ? 'navbar__link--active' : ''}`}
                                 >
                                     {link.label}
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                    <Link to="/login" className="btn btn-primary navbar__cta">
+                    <ThemeToggle />
+                    <Link to="/login" className="btn btn-primary navbar__cta hover-shine">
                         <span>Login</span>
                     </Link>
                 </div>

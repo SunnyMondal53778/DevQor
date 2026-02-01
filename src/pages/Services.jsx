@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ScrollReveal from '../components/ScrollReveal'
 import './Services.css'
 
 function Services() {
@@ -149,10 +150,10 @@ function Services() {
                 </div>
                 <div className="container">
                     <div className="services-hero__content">
-                        <h1 className="services-hero__title">
+                        <h1 className="services-hero__title animate-fadeInUp">
                             Our <span className="text-gradient">Services</span>
                         </h1>
-                        <p className="services-hero__description">
+                        <p className="services-hero__description animate-fadeInUp delay-200">
                             From concept to deployment, we offer comprehensive software development services
                             to help your business thrive in the digital landscape.
                         </p>
@@ -165,38 +166,44 @@ function Services() {
                 <div className="container">
                     <div className="services-list__grid">
                         {services.map((service, index) => (
-                            <div key={service.id} id={service.id} className="service-card">
-                                <div className="service-card__header">
-                                    <div className="service-card__icon">{service.icon}</div>
-                                    <div className="service-card__meta">
-                                        <span className="service-card__tagline">{service.tagline}</span>
-                                        <h3 className="service-card__title">{service.title}</h3>
+                            <ScrollReveal
+                                key={service.id}
+                                animation={index % 2 === 0 ? "fadeLeft" : "fadeRight"}
+                                delay={100}
+                            >
+                                <div id={service.id} className="service-card hover-lift hover-border-glow">
+                                    <div className="service-card__header">
+                                        <div className="service-card__icon hover-bounce">{service.icon}</div>
+                                        <div className="service-card__meta">
+                                            <span className="service-card__tagline">{service.tagline}</span>
+                                            <h3 className="service-card__title">{service.title}</h3>
+                                        </div>
+                                    </div>
+
+                                    <p className="service-card__description">{service.description}</p>
+
+                                    <div className="service-card__features">
+                                        <h4>What we offer:</h4>
+                                        <ul>
+                                            {service.features.map((feature, i) => (
+                                                <li key={i}>
+                                                    <span className="service-card__check">✓</span>
+                                                    {feature}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <div className="service-card__tech">
+                                        <h4>Technologies:</h4>
+                                        <div className="service-card__tech-tags">
+                                            {service.technologies.map((tech, i) => (
+                                                <span key={i} className="service-card__tech-tag hover-scale">{tech}</span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-
-                                <p className="service-card__description">{service.description}</p>
-
-                                <div className="service-card__features">
-                                    <h4>What we offer:</h4>
-                                    <ul>
-                                        {service.features.map((feature, i) => (
-                                            <li key={i}>
-                                                <span className="service-card__check">✓</span>
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="service-card__tech">
-                                    <h4>Technologies:</h4>
-                                    <div className="service-card__tech-tags">
-                                        {service.technologies.map((tech, i) => (
-                                            <span key={i} className="service-card__tech-tag">{tech}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -205,20 +212,26 @@ function Services() {
             {/* Process Section */}
             <section className="process section">
                 <div className="container">
-                    <h2 className="section-title">
-                        Our <span className="highlight">Process</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        A proven methodology for delivering successful projects
-                    </p>
+                    <ScrollReveal animation="fadeUp">
+                        <h2 className="section-title">
+                            Our <span className="highlight">Process</span>
+                        </h2>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeUp" delay={100}>
+                        <p className="section-subtitle">
+                            A proven methodology for delivering successful projects
+                        </p>
+                    </ScrollReveal>
 
                     <div className="process__grid">
                         {process.map((item, index) => (
-                            <div key={index} className="process__card">
-                                <span className="process__step">{item.step}</span>
-                                <h3 className="process__title">{item.title}</h3>
-                                <p className="process__description">{item.description}</p>
-                            </div>
+                            <ScrollReveal key={index} animation="fadeUp" delay={index * 150}>
+                                <div className="process__card hover-lift hover-glow">
+                                    <span className="process__step">{item.step}</span>
+                                    <h3 className="process__title">{item.title}</h3>
+                                    <p className="process__description">{item.description}</p>
+                                </div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -227,17 +240,19 @@ function Services() {
             {/* CTA Section */}
             <section className="services-cta section">
                 <div className="container">
-                    <div className="services-cta__content">
-                        <h2 className="services-cta__title">
-                            Ready to Build Something <span className="text-gradient">Amazing?</span>
-                        </h2>
-                        <p className="services-cta__description">
-                            Let's discuss your project and create a solution that exceeds your expectations.
-                        </p>
-                        <Link to="/contact" className="btn btn-primary btn-lg">
-                            <span>Get a Free Consultation</span>
-                        </Link>
-                    </div>
+                    <ScrollReveal animation="scale">
+                        <div className="services-cta__content">
+                            <h2 className="services-cta__title">
+                                Ready to Build Something <span className="text-gradient animate-textGlow">Amazing?</span>
+                            </h2>
+                            <p className="services-cta__description">
+                                Let's discuss your project and create a solution that exceeds your expectations.
+                            </p>
+                            <Link to="/contact" className="btn btn-primary btn-lg hover-shine">
+                                <span>Get a Free Consultation</span>
+                            </Link>
+                        </div>
+                    </ScrollReveal>
                 </div>
             </section>
         </div>
@@ -245,3 +260,4 @@ function Services() {
 }
 
 export default Services
+

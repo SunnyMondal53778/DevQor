@@ -1,3 +1,4 @@
+import ScrollReveal from '../components/ScrollReveal'
 import './About.css'
 
 function About() {
@@ -60,6 +61,13 @@ function About() {
         { year: '2023', title: 'Global Reach', description: 'Expanded to serve clients across 20+ countries worldwide.' },
     ]
 
+    const cultureHighlights = [
+        { icon: '📚', label: 'Continuous Learning' },
+        { icon: '🏠', label: 'Remote-First' },
+        { icon: '🎮', label: 'Fun Activities' },
+        { icon: '💪', label: 'Health & Wellness' },
+    ]
+
     return (
         <div className="about">
             {/* Hero Section */}
@@ -69,10 +77,10 @@ function About() {
                 </div>
                 <div className="container">
                     <div className="about-hero__content">
-                        <h1 className="about-hero__title">
-                            About <span className="text-gradient">Developer's Den</span>
+                        <h1 className="about-hero__title animate-fadeInUp">
+                            About <span className="text-gradient">DevQor</span>
                         </h1>
-                        <p className="about-hero__description">
+                        <p className="about-hero__description animate-fadeInUp delay-200">
                             We're a team of passionate engineers, designers, and innovators dedicated to
                             delivering engineering excellence. Our mission is to transform businesses through
                             cutting-edge technology solutions.
@@ -85,23 +93,27 @@ function About() {
             <section className="mission section">
                 <div className="container">
                     <div className="mission__grid">
-                        <div className="mission__card">
-                            <div className="mission__icon">🚀</div>
-                            <h3>Our Mission</h3>
-                            <p>
-                                To empower businesses with world-class software solutions that drive growth,
-                                efficiency, and innovation. We believe great technology should be accessible
-                                to companies of all sizes.
-                            </p>
-                        </div>
-                        <div className="mission__card">
-                            <div className="mission__icon">🌟</div>
-                            <h3>Our Vision</h3>
-                            <p>
-                                To become the most trusted software development partner globally, known for
-                                our unwavering commitment to quality, innovation, and client success.
-                            </p>
-                        </div>
+                        <ScrollReveal animation="fadeLeft">
+                            <div className="mission__card hover-lift hover-glow">
+                                <div className="mission__icon">🚀</div>
+                                <h3>Our Mission</h3>
+                                <p>
+                                    To empower businesses with world-class software solutions that drive growth,
+                                    efficiency, and innovation. We believe great technology should be accessible
+                                    to companies of all sizes.
+                                </p>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal animation="fadeRight" delay={200}>
+                            <div className="mission__card hover-lift hover-glow">
+                                <div className="mission__icon">🌟</div>
+                                <h3>Our Vision</h3>
+                                <p>
+                                    To become the most trusted software development partner globally, known for
+                                    our unwavering commitment to quality, innovation, and client success.
+                                </p>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -109,20 +121,26 @@ function About() {
             {/* Values */}
             <section className="values section">
                 <div className="container">
-                    <h2 className="section-title">
-                        Our <span className="highlight">Core Values</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        The principles that guide everything we do
-                    </p>
+                    <ScrollReveal animation="fadeUp">
+                        <h2 className="section-title">
+                            Our <span className="highlight">Core Values</span>
+                        </h2>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeUp" delay={100}>
+                        <p className="section-subtitle">
+                            The principles that guide everything we do
+                        </p>
+                    </ScrollReveal>
 
                     <div className="values__grid">
                         {values.map((value, index) => (
-                            <div key={index} className="values__card">
-                                <div className="values__icon">{value.icon}</div>
-                                <h3 className="values__title">{value.title}</h3>
-                                <p className="values__description">{value.description}</p>
-                            </div>
+                            <ScrollReveal key={index} animation="fadeUp" delay={index * 100}>
+                                <div className="values__card hover-lift hover-border-glow">
+                                    <div className="values__icon hover-bounce">{value.icon}</div>
+                                    <h3 className="values__title">{value.title}</h3>
+                                    <p className="values__description">{value.description}</p>
+                                </div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -131,24 +149,34 @@ function About() {
             {/* Timeline */}
             <section className="timeline section">
                 <div className="container">
-                    <h2 className="section-title">
-                        Our <span className="highlight">Journey</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        From a small startup to a global software development agency
-                    </p>
+                    <ScrollReveal animation="fadeUp">
+                        <h2 className="section-title">
+                            Our <span className="highlight">Journey</span>
+                        </h2>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeUp" delay={100}>
+                        <p className="section-subtitle">
+                            From a small startup to a global software development agency
+                        </p>
+                    </ScrollReveal>
 
                     <div className="timeline__container">
                         {timeline.map((item, index) => (
-                            <div key={index} className="timeline__item">
-                                <div className="timeline__marker">
-                                    <span>{item.year}</span>
+                            <ScrollReveal
+                                key={index}
+                                animation={index % 2 === 0 ? "fadeLeft" : "fadeRight"}
+                                delay={index * 100}
+                            >
+                                <div className="timeline__item hover-lift">
+                                    <div className="timeline__marker">
+                                        <span>{item.year}</span>
+                                    </div>
+                                    <div className="timeline__content">
+                                        <h4>{item.title}</h4>
+                                        <p>{item.description}</p>
+                                    </div>
                                 </div>
-                                <div className="timeline__content">
-                                    <h4>{item.title}</h4>
-                                    <p>{item.description}</p>
-                                </div>
-                            </div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -157,21 +185,27 @@ function About() {
             {/* Team */}
             <section className="team section">
                 <div className="container">
-                    <h2 className="section-title">
-                        Meet Our <span className="highlight">Leadership</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        The talented individuals driving our success
-                    </p>
+                    <ScrollReveal animation="fadeUp">
+                        <h2 className="section-title">
+                            Meet Our <span className="highlight">Leadership</span>
+                        </h2>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeUp" delay={100}>
+                        <p className="section-subtitle">
+                            The talented individuals driving our success
+                        </p>
+                    </ScrollReveal>
 
                     <div className="team__grid">
                         {team.map((member, index) => (
-                            <div key={index} className="team__card">
-                                <div className="team__avatar">{member.image}</div>
-                                <h3 className="team__name">{member.name}</h3>
-                                <span className="team__role">{member.role}</span>
-                                <p className="team__description">{member.description}</p>
-                            </div>
+                            <ScrollReveal key={index} animation="scale" delay={index * 100}>
+                                <div className="team__card hover-lift hover-glow">
+                                    <div className="team__avatar">{member.image}</div>
+                                    <h3 className="team__name">{member.name}</h3>
+                                    <span className="team__role">{member.role}</span>
+                                    <p className="team__description">{member.description}</p>
+                                </div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -180,34 +214,26 @@ function About() {
             {/* Culture */}
             <section className="culture section">
                 <div className="container">
-                    <div className="culture__content">
-                        <h2 className="culture__title">
-                            Our <span className="text-gradient">Culture</span>
-                        </h2>
-                        <p className="culture__description">
-                            At Developer's Den, we believe in creating an environment where innovation thrives.
-                            We foster a culture of continuous learning, collaboration, and work-life balance.
-                            Our team is our greatest asset, and we invest in their growth and well-being.
-                        </p>
-                        <div className="culture__highlights">
-                            <div className="culture__highlight">
-                                <span className="culture__highlight-icon">📚</span>
-                                <span>Continuous Learning</span>
-                            </div>
-                            <div className="culture__highlight">
-                                <span className="culture__highlight-icon">🏠</span>
-                                <span>Remote-First</span>
-                            </div>
-                            <div className="culture__highlight">
-                                <span className="culture__highlight-icon">🎮</span>
-                                <span>Fun Activities</span>
-                            </div>
-                            <div className="culture__highlight">
-                                <span className="culture__highlight-icon">💪</span>
-                                <span>Health & Wellness</span>
+                    <ScrollReveal animation="scale">
+                        <div className="culture__content">
+                            <h2 className="culture__title">
+                                Our <span className="text-gradient animate-textGlow">Culture</span>
+                            </h2>
+                            <p className="culture__description">
+                                At DevQor, we believe in creating an environment where innovation thrives.
+                                We foster a culture of continuous learning, collaboration, and work-life balance.
+                                Our team is our greatest asset, and we invest in their growth and well-being.
+                            </p>
+                            <div className="culture__highlights">
+                                {cultureHighlights.map((item, index) => (
+                                    <div key={index} className="culture__highlight hover-scale">
+                                        <span className="culture__highlight-icon">{item.icon}</span>
+                                        <span>{item.label}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </section>
         </div>
@@ -215,3 +241,4 @@ function About() {
 }
 
 export default About
+

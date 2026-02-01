@@ -108,7 +108,7 @@
     width: 80px;
     height: 80px;
     margin: 0 auto var(--space-lg);
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.2) 0%, rgba(255, 107, 0, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
     border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
@@ -270,7 +270,7 @@
    Culture
    ============================================ */
 .culture {
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
 }
 
 .culture__content {

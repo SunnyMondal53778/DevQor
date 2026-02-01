@@ -40,19 +40,15 @@ function Login() {
             </div>
 
             <div className="auth-container">
-                <div className="auth-card">
+                <div className="auth-card animate-scaleIn">
                     {/* Header */}
                     <div className="auth-card__header">
                         <Link to="/" className="auth-card__logo">
-                            <div className="auth-card__logo-icon">
-                                <span>&lt;</span>
-                                <span className="highlight">/</span>
-                                <span>&gt;</span>
-                            </div>
-                            <div className="auth-card__logo-text">
-                                <span>Developer's</span>
-                                <span className="auth-card__logo-den">Den</span>
-                            </div>
+                            <img
+                                src="/devqor-logo.jpg"
+                                alt="DevQor"
+                                className="auth-card__logo-image"
+                            />
                         </Link>
                         <h1 className="auth-card__title">Welcome Back</h1>
                         <p className="auth-card__subtitle">Sign in to access your account</p>
@@ -131,7 +127,7 @@ function Login() {
 
                         <button
                             type="submit"
-                            className="btn btn-primary btn-lg auth-submit"
+                            className="btn btn-primary btn-lg auth-submit hover-shine"
                             disabled={isSubmitting}
                         >
                             <span>{isSubmitting ? 'Signing in...' : 'Sign In'}</span>

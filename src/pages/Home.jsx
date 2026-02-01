@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ScrollReveal from '../components/ScrollReveal'
 import './Home.css'
 
 function Home() {
@@ -69,27 +70,27 @@ function Home() {
                         </h1>
 
                         <p className="hero__description animate-fadeInUp delay-300">
-                            Transform your digital vision into reality with Developer's Den.
+                            Transform your digital vision into reality with DevQor.
                             We're your strategic partner in building world-class software solutions
                             that drive growth and innovation.
                         </p>
 
                         <div className="hero__actions animate-fadeInUp delay-400">
-                            <Link to="/contact" className="btn btn-primary btn-lg">
+                            <Link to="/contact" className="btn btn-primary btn-lg hover-shine">
                                 <span>Start Your Project</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </Link>
-                            <Link to="/services" className="btn btn-secondary btn-lg">
+                            <Link to="/services" className="btn btn-secondary btn-lg hover-lift">
                                 <span>Explore Services</span>
                             </Link>
                         </div>
                     </div>
 
                     <div className="hero__visual animate-fadeIn delay-500">
-                        <div className="hero__code-window">
+                        <div className="hero__code-window hover-tilt">
                             <div className="hero__code-header">
                                 <div className="hero__code-dots">
                                     <span></span>
@@ -99,7 +100,7 @@ function Home() {
                                 <span className="hero__code-title">developer.js</span>
                             </div>
                             <div className="hero__code-body">
-                                <pre><code><span className="code-keyword">const</span> <span className="code-variable">developersDen</span> = {'{'}<br />
+                                <pre><code><span className="code-keyword">const</span> <span className="code-variable">devQor</span> = {'{'}<br />
                                     <span className="code-property">  mission</span>: <span className="code-string">"Engineering Excellence"</span>,<br />
                                     <span className="code-property">  motto</span>: [<span className="code-string">"Code"</span>, <span className="code-string">"Create"</span>, <span className="code-string">"Conquer"</span>],<br />
                                     <span className="code-property">  deliver</span>: () =&gt; <span className="code-string">"Success"</span> 🚀<br />
@@ -122,10 +123,17 @@ function Home() {
                 <div className="container">
                     <div className="stats__grid">
                         {stats.map((stat, index) => (
-                            <div key={index} className="stats__item">
-                                <span className="stats__value">{stat.value}</span>
-                                <span className="stats__label">{stat.label}</span>
-                            </div>
+                            <ScrollReveal
+                                key={index}
+                                animation="fadeUp"
+                                delay={index * 100}
+                                className="stats__item-wrapper"
+                            >
+                                <div className="stats__item hover-scale">
+                                    <span className="stats__value">{stat.value}</span>
+                                    <span className="stats__label">{stat.label}</span>
+                                </div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
@@ -134,28 +142,40 @@ function Home() {
             {/* Services Section */}
             <section className="home-services section">
                 <div className="container">
-                    <h2 className="section-title">
-                        Our <span className="highlight">Services</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        Comprehensive software solutions tailored to accelerate your business growth
-                    </p>
+                    <ScrollReveal animation="fadeUp">
+                        <h2 className="section-title">
+                            Our <span className="highlight">Services</span>
+                        </h2>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeUp" delay={100}>
+                        <p className="section-subtitle">
+                            Comprehensive software solutions tailored to accelerate your business growth
+                        </p>
+                    </ScrollReveal>
 
                     <div className="home-services__grid">
                         {services.map((service, index) => (
-                            <div key={index} className="card" style={{ animationDelay: `${index * 100}ms` }}>
-                                <div className="card-icon">{service.icon}</div>
-                                <h3 className="card-title">{service.title}</h3>
-                                <p className="card-description">{service.description}</p>
-                            </div>
+                            <ScrollReveal
+                                key={index}
+                                animation="fadeUp"
+                                delay={index * 100}
+                            >
+                                <div className="card hover-lift hover-border-glow">
+                                    <div className="card-icon hover-bounce">{service.icon}</div>
+                                    <h3 className="card-title">{service.title}</h3>
+                                    <p className="card-description">{service.description}</p>
+                                </div>
+                            </ScrollReveal>
                         ))}
                     </div>
 
-                    <div className="home-services__cta">
-                        <Link to="/services" className="btn btn-primary">
-                            <span>View All Services</span>
-                        </Link>
-                    </div>
+                    <ScrollReveal animation="fadeUp" delay={600}>
+                        <div className="home-services__cta">
+                            <Link to="/services" className="btn btn-primary hover-shine">
+                                <span>View All Services</span>
+                            </Link>
+                        </div>
+                    </ScrollReveal>
                 </div>
             </section>
 
@@ -163,9 +183,9 @@ function Home() {
             <section className="why-us section">
                 <div className="container">
                     <div className="why-us__grid">
-                        <div className="why-us__content">
+                        <ScrollReveal animation="fadeLeft" className="why-us__content">
                             <h2 className="why-us__title">
-                                Why Choose <span className="highlight">Developer's Den?</span>
+                                Why Choose <span className="highlight">DevQor?</span>
                             </h2>
                             <p className="why-us__description">
                                 We don't just write code – we architect solutions that transform businesses.
@@ -173,59 +193,41 @@ function Home() {
                             </p>
 
                             <ul className="why-us__list">
-                                <li>
-                                    <div className="why-us__check">✓</div>
-                                    <div>
-                                        <strong>Expert Team</strong>
-                                        <p>Senior developers with 10+ years of industry experience</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="why-us__check">✓</div>
-                                    <div>
-                                        <strong>Agile Methodology</strong>
-                                        <p>Iterative development with continuous feedback loops</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="why-us__check">✓</div>
-                                    <div>
-                                        <strong>24/7 Support</strong>
-                                        <p>Round-the-clock maintenance and technical support</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="why-us__check">✓</div>
-                                    <div>
-                                        <strong>Scalable Solutions</strong>
-                                        <p>Architectures designed to grow with your business</p>
-                                    </div>
-                                </li>
+                                {[
+                                    { title: 'Expert Team', desc: 'Senior developers with 10+ years of industry experience' },
+                                    { title: 'Agile Methodology', desc: 'Iterative development with continuous feedback loops' },
+                                    { title: '24/7 Support', desc: 'Round-the-clock maintenance and technical support' },
+                                    { title: 'Scalable Solutions', desc: 'Architectures designed to grow with your business' },
+                                ].map((item, index) => (
+                                    <ScrollReveal key={index} animation="fadeUp" delay={index * 100}>
+                                        <li>
+                                            <div className="why-us__check">✓</div>
+                                            <div>
+                                                <strong>{item.title}</strong>
+                                                <p>{item.desc}</p>
+                                            </div>
+                                        </li>
+                                    </ScrollReveal>
+                                ))}
                             </ul>
-                        </div>
+                        </ScrollReveal>
 
-                        <div className="why-us__visual">
-                            <div className="why-us__card">
-                                <div className="why-us__card-icon">🏆</div>
-                                <h4>Industry Leaders</h4>
-                                <p>Trusted by startups and enterprises alike</p>
+                        <ScrollReveal animation="fadeRight" delay={200}>
+                            <div className="why-us__visual">
+                                {[
+                                    { icon: '🏆', title: 'Industry Leaders', desc: 'Trusted by startups and enterprises alike' },
+                                    { icon: '⚡', title: 'Fast Delivery', desc: 'Efficient processes for quick turnaround' },
+                                    { icon: '🔒', title: 'Secure Code', desc: 'Security-first development practices' },
+                                    { icon: '💡', title: 'Innovation', desc: 'Cutting-edge technologies and solutions' },
+                                ].map((card, index) => (
+                                    <div key={index} className="why-us__card hover-lift hover-glow">
+                                        <div className="why-us__card-icon">{card.icon}</div>
+                                        <h4>{card.title}</h4>
+                                        <p>{card.desc}</p>
+                                    </div>
+                                ))}
                             </div>
-                            <div className="why-us__card">
-                                <div className="why-us__card-icon">⚡</div>
-                                <h4>Fast Delivery</h4>
-                                <p>Efficient processes for quick turnaround</p>
-                            </div>
-                            <div className="why-us__card">
-                                <div className="why-us__card-icon">🔒</div>
-                                <h4>Secure Code</h4>
-                                <p>Security-first development practices</p>
-                            </div>
-                            <div className="why-us__card">
-                                <div className="why-us__card-icon">💡</div>
-                                <h4>Innovation</h4>
-                                <p>Cutting-edge technologies and solutions</p>
-                            </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -233,23 +235,25 @@ function Home() {
             {/* CTA Section */}
             <section className="home-cta section">
                 <div className="container">
-                    <div className="home-cta__content">
-                        <h2 className="home-cta__title">
-                            Ready to <span className="text-gradient">Transform</span> Your Ideas?
-                        </h2>
-                        <p className="home-cta__description">
-                            Let's build something extraordinary together. Get in touch and let's discuss
-                            how we can bring your vision to life.
-                        </p>
-                        <div className="home-cta__actions">
-                            <Link to="/contact" className="btn btn-primary btn-lg">
-                                <span>Get Started Today</span>
-                            </Link>
-                            <Link to="/about" className="btn btn-secondary btn-lg">
-                                <span>Learn More About Us</span>
-                            </Link>
+                    <ScrollReveal animation="scale">
+                        <div className="home-cta__content">
+                            <h2 className="home-cta__title">
+                                Ready to <span className="text-gradient animate-textGlow">Transform</span> Your Ideas?
+                            </h2>
+                            <p className="home-cta__description">
+                                Let's build something extraordinary together. Get in touch and let's discuss
+                                how we can bring your vision to life.
+                            </p>
+                            <div className="home-cta__actions">
+                                <Link to="/contact" className="btn btn-primary btn-lg hover-shine">
+                                    <span>Get Started Today</span>
+                                </Link>
+                                <Link to="/about" className="btn btn-secondary btn-lg hover-lift">
+                                    <span>Learn More About Us</span>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </section>
         </div>
@@ -257,3 +261,4 @@ function Home() {
 }
 
 export default Home
+

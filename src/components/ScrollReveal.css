@@ -1,0 +1,112 @@
+/* ============================================
+   Scroll Reveal Animations
+   ============================================ */
+
+.scroll-reveal {
+    transition-property: opacity, transform;
+    transition-duration: var(--reveal-duration, 600ms);
+    transition-delay: var(--reveal-delay, 0ms);
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* Fade Up Animation */
+.scroll-reveal--fadeUp {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.scroll-reveal--fadeUp.scroll-reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade Down Animation */
+.scroll-reveal--fadeDown {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+.scroll-reveal--fadeDown.scroll-reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade Left Animation */
+.scroll-reveal--fadeLeft {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.scroll-reveal--fadeLeft.scroll-reveal--visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade Right Animation */
+.scroll-reveal--fadeRight {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.scroll-reveal--fadeRight.scroll-reveal--visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale Animation */
+.scroll-reveal--scale {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.scroll-reveal--scale.scroll-reveal--visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Rotate Animation */
+.scroll-reveal--rotate {
+    opacity: 0;
+    transform: rotate(-5deg) scale(0.95);
+}
+
+.scroll-reveal--rotate.scroll-reveal--visible {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+/* Zoom In Animation */
+.scroll-reveal--zoomIn {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.scroll-reveal--zoomIn.scroll-reveal--visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Flip Animation */
+.scroll-reveal--flip {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(20deg);
+}
+
+.scroll-reveal--flip.scroll-reveal--visible {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0);
+}
+
+/* Blur Animation */
+.scroll-reveal--blur {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+}
+
+.scroll-reveal--blur.scroll-reveal--visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
