@@ -9,9 +9,9 @@
   
   ---
   
-  [![Projects](https://img.shields.io/badge/Projects%20Delivered-150+-success?style=for-the-badge)](/)
-  [![Clients](https://img.shields.io/badge/Happy%20Clients-50+-blue?style=for-the-badge)](/)
-  [![Experience](https://img.shields.io/badge/Years%20Experience-10+-orange?style=for-the-badge)](/)
+  [![Projects](https://img.shields.io/badge/Projects%20Delivered-10+-success?style=for-the-badge)](/)
+  [![Clients](https://img.shields.io/badge/Happy%20Clients-6+-blue?style=for-the-badge)](/)
+  [![Team](https://img.shields.io/badge/Team%20Members-22+-orange?style=for-the-badge)](/)
   [![Satisfaction](https://img.shields.io/badge/Client%20Satisfaction-99%25-brightgreen?style=for-the-badge)](/)
   
   [🌐 Website](https://devqor.in) • [📧 Contact Us](mailto:contact@devqor.in) • [📱 +91 9804804973](tel:+919804804973)
@@ -23,7 +23,7 @@
 
 **DevQor** is a premier software development agency headquartered in **Kolkata, West Bengal, India**. We are a team of passionate engineers, designers, and innovators dedicated to delivering engineering excellence. Our mission is to transform businesses through cutting-edge technology solutions.
 
-Since our founding in **2018**, we have grown from a small startup to a **global software development agency**, serving clients across **20+ countries worldwide**. We're recognized as a **"Top Software Development Agency"** and are proud certified partners with **AWS, Azure, and Google Cloud**.
+Since our founding in **December 2025**, we have grown rapidly with **22+ team members**, serving clients and delivering innovative software solutions. We specialize in full-stack development, cloud solutions, and digital transformation.
 
 ### 🎯 Our Mission
 
@@ -55,7 +55,7 @@ Comprehensive web and mobile application development from concept to deployment.
 
 ---
 
-### � Frontend Development
+### 🎨 Frontend Development
 **Stunning User Experiences**
 
 Create beautiful, responsive, and performant user interfaces that engage and delight your users across all devices.
@@ -87,7 +87,7 @@ Build robust, secure, and scalable server-side solutions that power your applica
 
 ---
 
-### ☁️ Cloud Solutions & Deployment
+### ☁️ Cloud Solutions
 **Scale Without Limits**
 
 Leverage the power of cloud computing to deploy, scale, and manage your applications with enterprise-grade infrastructure.
@@ -100,22 +100,6 @@ Leverage the power of cloud computing to deploy, scale, and manage your applicat
 - Multi-Cloud Strategy
 
 **Technologies:** AWS, Azure, GCP, Docker, Kubernetes, Terraform
-
----
-
-### 🔧 Maintenance & Support
-**24/7 Peace of Mind**
-
-Keep your applications running smoothly with our comprehensive maintenance and support services, available around the clock.
-
-- 24/7 Monitoring & Alerts
-- Bug Fixes & Updates
-- Performance Optimization
-- Security Patches
-- Backup & Recovery
-- SLA-Based Support
-
-**Technologies:** Datadog, Grafana, PagerDuty, Sentry, New Relic, Prometheus
 
 ---
 
@@ -182,7 +166,7 @@ We work as partners, not vendors. Your success is our success, and we build last
 </td>
 <td align="center" width="25%">
 
-### � Innovation
+### 💡 Innovation
 We stay ahead of the curve, constantly learning and implementing cutting-edge technologies.
 
 </td>
@@ -200,23 +184,17 @@ Transparency and honesty guide everything we do. We communicate openly and deliv
 ## 📈 Our Journey
 
 ```
-2018 ──────── Founded
-              Started with a vision to revolutionize software development outsourcing.
+Dec 2025 ──── Founded
+              Started with a vision to revolutionize software development 
+              and deliver engineering excellence.
               
-2019 ──────── First Major Client
-              Secured our first enterprise client and delivered a transformative solution.
+Jan 2026 ──── The Beginning
+              Started our journey with 3 passionate friends united by 
+              a shared dream.
               
-2020 ──────── Team Expansion
-              Grew to 15 talented engineers and opened our first overseas office.
-              
-2021 ──────── Cloud Expertise
-              Became certified partners with AWS, Azure, and Google Cloud.
-              
-2022 ──────── Industry Recognition
-              Named "Top Software Development Agency" by Tech Review.
-              
-2023 ──────── Global Reach
-              Expanded to serve clients across 20+ countries worldwide.
+Feb 2026 ──── Team Expansion
+              Grew rapidly to 22 talented team members, building a strong 
+              foundation for the future.
 ```
 
 ---
@@ -225,29 +203,17 @@ Transparency and honesty guide everything we do. We communicate openly and deliv
 
 <table>
 <tr>
-<td align="center" width="25%">
-<h3>👨‍💼 Alex Johnson</h3>
-<b>Founder & CEO</b>
+<td align="center" width="50%">
+<h3>👨‍💼 Sunny Mondal</h3>
+<b>Founder and CEO</b>
 <br/><br/>
-Visionary leader with 15+ years in software engineering
+Visionary leader with 4 years of experience in software engineering
 </td>
-<td align="center" width="25%">
-<h3>👩‍💻 Sarah Chen</h3>
-<b>CTO</b>
+<td align="center" width="50%">
+<h3>👨‍💼 Sujal Shaw</h3>
+<b>Co-Founder and COO</b>
 <br/><br/>
-Full stack expert driving technical innovation
-</td>
-<td align="center" width="25%">
-<h3>👨‍🎨 Michael Park</h3>
-<b>Lead Designer</b>
-<br/><br/>
-Award-winning UI/UX designer and creative director
-</td>
-<td align="center" width="25%">
-<h3>👩‍🔬 Emily Rodriguez</h3>
-<b>Engineering Lead</b>
-<br/><br/>
-Architecting scalable solutions for enterprise clients
+Operations expert with 2 years of experience in business management
 </td>
 </tr>
 </table>
@@ -297,18 +263,18 @@ Mental health support and wellness programs
 
 ---
 
-## � Why Choose DevQor?
+## ⭐ Why Choose DevQor?
 
 | Benefit | Description |
 |---------|-------------|
-| ✅ **Experienced Team** | 10+ years of combined experience in software development |
-| ✅ **Proven Track Record** | 150+ projects delivered successfully |
-| ✅ **Global Presence** | Serving clients across 20+ countries |
-| ✅ **Cloud Certified** | AWS, Azure, and Google Cloud partners |
-| ✅ **24/7 Support** | Round-the-clock maintenance and support |
-| ✅ **Agile Methodology** | Flexible, iterative development approach |
-| ✅ **Quality Assured** | 99% client satisfaction rate |
+| ✅ **Experienced Team** | Senior developers with 10+ years of industry experience |
+| ✅ **Proven Track Record** | 10+ projects delivered successfully |
+| ✅ **Client Satisfaction** | 6+ happy clients with 99% satisfaction rate |
+| ✅ **Agile Methodology** | Iterative development with continuous feedback loops |
+| ✅ **24/7 Support** | Round-the-clock maintenance and technical support |
+| ✅ **Scalable Solutions** | Architectures designed to grow with your business |
 | ✅ **Competitive Pricing** | Premium quality at competitive rates |
+| ✅ **Fast Delivery** | Efficient processes for quick turnaround |
 
 ---
 
@@ -350,9 +316,10 @@ Ready to start your next project? We'd love to hear from you!
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/company/devqor)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/devqor)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/devqor)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/devqor)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/DevQor)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/share/1Qi8towDi4/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/devqor/)
 [![Website](https://img.shields.io/badge/Website-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://devqor.in)
 
 </div>
@@ -377,7 +344,7 @@ Let's discuss your project and create a solution that exceeds your expectations.
   
   **DevQor** - *Code. Create. Conquer.*
   
-  © 2018-2026 DevQor. All rights reserved.
+  © 2025-2026 DevQor. All rights reserved.
   
   Made with ❤️ in Kolkata, India
   
