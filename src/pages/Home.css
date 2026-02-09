@@ -313,7 +313,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
+    grid-auto-rows: 1fr;
 }
+
 
 .home-services__cta {
     text-align: center;

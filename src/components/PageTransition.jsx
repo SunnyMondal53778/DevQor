@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import './PageTransition.css'
 
@@ -9,8 +9,15 @@ function PageTransition({ children }) {
     const location = useLocation()
     const [displayChildren, setDisplayChildren] = useState(children)
     const [transitionStage, setTransitionStage] = useState('enter')
+    const isInitialMount = useRef(true)
 
     useEffect(() => {
+        // Skip exit animation on initial mount
+        if (isInitialMount.current) {
+            isInitialMount.current = false
+            return
+        }
+
         // When location changes, start exit animation
         setTransitionStage('exit')
 

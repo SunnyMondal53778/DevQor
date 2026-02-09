@@ -327,7 +327,11 @@ button {
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
   transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
 
 .card:hover {
   background: var(--color-bg-card-hover);

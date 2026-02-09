@@ -37,9 +37,9 @@ function Home() {
     ]
 
     const stats = [
-        { value: '150+', label: 'Projects Delivered' },
-        { value: '50+', label: 'Happy Clients' },
-        { value: '25+', label: 'Team Members' },
+        { value: '10+', label: 'Projects' },
+        { value: '6+', label: 'Happy Clients' },
+        { value: '22+', label: 'Team Members' },
         { value: '99%', label: 'Client Satisfaction' },
     ]
 

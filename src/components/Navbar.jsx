@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 import ThemeToggle from './ThemeToggle'
 import './Navbar.css'
 
@@ -7,6 +8,7 @@ function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const location = useLocation()
+    const { isDark } = useTheme()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,7 +34,7 @@ function Navbar() {
             <div className="navbar__container container">
                 <Link to="/" className="navbar__logo">
                     <img
-                        src="/devqor-logo.jpg"
+                        src={isScrolled ? "/devqor-logo.jpg" : (isDark ? "/devqor-logo.jpg" : "/devgor-logo-white.jpg")}
                         alt="DevQor - Code. Create. Conquer."
                         className="navbar__logo-image"
                     />
@@ -52,8 +54,8 @@ function Navbar() {
                         ))}
                     </ul>
                     <ThemeToggle />
-                    <Link to="/login" className="btn btn-primary navbar__cta hover-shine">
-                        <span>Login</span>
+                    <Link to="/contact" className="btn btn-primary navbar__cta hover-shine">
+                        <span>Get a Free Consultation</span>
                     </Link>
                 </div>
 

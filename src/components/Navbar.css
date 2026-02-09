@@ -39,22 +39,36 @@
     height: 50px;
     width: auto;
     object-fit: contain;
-    filter: brightness(1);
     transition: all var(--transition-fast);
+    mix-blend-mode: screen;
+    opacity: 0.95;
+}
+
+/* Remove blend mode when scrolled for better visibility */
+.navbar--scrolled .navbar__logo-image {
+    mix-blend-mode: normal;
+    opacity: 1;
 }
 
 .navbar__logo:hover .navbar__logo-image {
+    opacity: 1;
     filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
 }
 
 /* Light mode logo adjustment */
 [data-theme="light"] .navbar__logo-image {
-    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+
+/* Light mode scrolled - also remove blend mode */
+[data-theme="light"] .navbar--scrolled .navbar__logo-image {
+    mix-blend-mode: normal;
 }
 
 [data-theme="light"] .navbar__logo:hover .navbar__logo-image {
-    filter: invert(1) brightness(0.9) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    filter: brightness(0.9) drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 }
+
 
 /* Menu */
 .navbar__menu {
@@ -78,6 +92,11 @@
     padding: var(--space-sm) 0;
 }
 
+/* Make links white when navbar is scrolled */
+.navbar--scrolled .navbar__link {
+    color: #ffffff;
+}
+
 .navbar__link::after {
     content: '';
     position: absolute;
@@ -92,6 +111,12 @@
 .navbar__link:hover,
 .navbar__link--active {
     color: var(--color-text-primary);
+}
+
+/* Ensure white color on hover/active when scrolled */
+.navbar--scrolled .navbar__link:hover,
+.navbar--scrolled .navbar__link--active {
+    color: #ffffff;
 }
 
 .navbar__link:hover::after,

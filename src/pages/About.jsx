@@ -4,29 +4,18 @@ import './About.css'
 function About() {
     const team = [
         {
-            name: 'Alex Johnson',
-            role: 'Founder & CEO',
-            image: '👨‍💼',
-            description: 'Visionary leader with 15+ years in software engineering',
+            name: 'Sunny Mondal',
+            role: 'Founder and CEO',
+            image: '/Sunny_DP.jpeg',
+            description: 'Visionary leader with 4 years of experience in software engineering',
         },
         {
-            name: 'Sarah Chen',
-            role: 'CTO',
-            image: '👩‍💻',
-            description: 'Full stack expert driving technical innovation',
+            name: 'Sujal Shaw',
+            role: 'Co-Founder and COO',
+            image: '/Sujal_DP.jpeg',
+            description: 'Operations expert with 2 years of experience in business management',
         },
-        {
-            name: 'Michael Park',
-            role: 'Lead Designer',
-            image: '👨‍🎨',
-            description: 'Award-winning UI/UX designer and creative director',
-        },
-        {
-            name: 'Emily Rodriguez',
-            role: 'Engineering Lead',
-            image: '👩‍🔬',
-            description: 'Architecting scalable solutions for enterprise clients',
-        },
+        
     ]
 
     const values = [
@@ -53,12 +42,9 @@ function About() {
     ]
 
     const timeline = [
-        { year: '2018', title: 'Founded', description: 'Started with a vision to revolutionize software development outsourcing.' },
-        { year: '2019', title: 'First Major Client', description: 'Secured our first enterprise client and delivered a transformative solution.' },
-        { year: '2020', title: 'Team Expansion', description: 'Grew to 15 talented engineers and opened our first overseas office.' },
-        { year: '2021', title: 'Cloud Expertise', description: 'Became certified partners with AWS, Azure, and Google Cloud.' },
-        { year: '2022', title: 'Industry Recognition', description: 'Named "Top Software Development Agency" by Tech Review.' },
-        { year: '2023', title: 'Global Reach', description: 'Expanded to serve clients across 20+ countries worldwide.' },
+        { year: 'Dec 2025', title: 'Founded', description: 'Started with a vision to revolutionize software development and deliver engineering excellence.' },
+        { year: 'Jan 2026', title: 'The Beginning', description: 'Started our journey with 3 passionate friends united by a shared dream.' },
+        { year: 'Feb 2026', title: 'Team Expansion', description: 'Grew rapidly to 22 talented team members, building a strong foundation for the future.' },
     ]
 
     const cultureHighlights = [
@@ -85,6 +71,38 @@ function About() {
                             delivering engineering excellence. Our mission is to transform businesses through
                             cutting-edge technology solutions.
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Stats Section */}
+            <section className="about-stats">
+                <div className="container">
+                    <div className="about-stats__grid">
+                        <ScrollReveal animation="fadeUp" delay={0}>
+                            <div className="about-stats__item hover-lift">
+                                <span className="about-stats__number">10+</span>
+                                <span className="about-stats__label">Projects</span>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal animation="fadeUp" delay={100}>
+                            <div className="about-stats__item hover-lift">
+                                <span className="about-stats__number">6+</span>
+                                <span className="about-stats__label">Happy Clients</span>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal animation="fadeUp" delay={200}>
+                            <div className="about-stats__item hover-lift">
+                                <span className="about-stats__number">22+</span>
+                                <span className="about-stats__label">Team Members</span>
+                            </div>
+                        </ScrollReveal>
+                        <ScrollReveal animation="fadeUp" delay={300}>
+                            <div className="about-stats__item hover-lift">
+                                <span className="about-stats__number">99%</span>
+                                <span className="about-stats__label">Client Satisfaction</span>
+                            </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
@@ -147,7 +165,7 @@ function About() {
             </section>
 
             {/* Timeline */}
-            <section className="timeline section">
+            {/* <section className="timeline section">
                 <div className="container">
                     <ScrollReveal animation="fadeUp">
                         <h2 className="section-title">
@@ -180,7 +198,7 @@ function About() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Team */}
             <section className="team section">
@@ -200,7 +218,13 @@ function About() {
                         {team.map((member, index) => (
                             <ScrollReveal key={index} animation="scale" delay={index * 100}>
                                 <div className="team__card hover-lift hover-glow">
-                                    <div className="team__avatar">{member.image}</div>
+                                    <div className="team__avatar">
+                                        {member.image.startsWith('/') || member.image.startsWith('http') ? (
+                                            <img src={member.image} alt={member.name} />
+                                        ) : (
+                                            member.image
+                                        )}
+                                    </div>
                                     <h3 className="team__name">{member.name}</h3>
                                     <span className="team__role">{member.role}</span>
                                     <p className="team__description">{member.description}</p>

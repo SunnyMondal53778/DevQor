@@ -8,6 +8,10 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import FAQ from './pages/FAQ'
+import RefundPolicy from './pages/RefundPolicy'
+import PrivacyPolicy from './pages/Privacy'
+import TermsOfService from './pages/TermsOfService'
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </PageTransition>
       </main>
